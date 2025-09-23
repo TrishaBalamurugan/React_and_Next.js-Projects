@@ -1,0 +1,46 @@
+<h1>{{ title }}</h1>
+
+<!-- Filter input -->
+<input
+  type="text"
+  placeholder="Filter recipes by name or ingredient"
+  [(ngModel)]="filterText"
+  class="filter-input"
+/>
+
+<!-- Add recipe form -->
+<div class="form-container">
+  <h2>Add New Recipe</h2>
+  <input type="text" placeholder="Recipe Name" [(ngModel)]="newRecipeName" />
+  <input type="text" placeholder="Ingredients (comma separated)" [(ngModel)]="newRecipeIngredients" />
+  <textarea placeholder="Instructions" [(ngModel)]="newRecipeInstructions"></textarea>
+  
+  <!-- Image upload -->
+  <input type="file" id="recipeImage" (change)="onImageSelected($event)" accept="image/*" />
+  
+  <button (click)="addRecipe()">Add Recipe</button>
+</div>
+
+<!-- Recipe list -->
+<div *ngFor="let recipe of filteredRecipes" class="recipe-card">
+  <h2>
+    {{ recipe.name }}
+    <span (click)="toggleFavorite(recipe)" class="favorite">
+      {{ recipe.favorite ? '★' : '☆' }}
+    </span>
+  </h2>
+
+  <!-- Display image if exists -->
+  <img *ngIf="recipe.image" [src]="recipe.image" alt="{{ recipe.name }}" class="recipe-image" />
+
+  <h3>Ingredients:</h3>
+  <ul>
+    <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+  </ul>
+  <button (click)="toggleInstructions(recipe)">
+    {{ recipe.showInstructions ? 'Hide' : 'Show' }} Instructions
+  </button>
+  <p *ngIf="recipe.showInstructions">{{ recipe.instructions }}</p>
+  <button (click)="deleteRecipe(recipe.id)" class="delete-btn">Delete Recipe</button>
+</div>
+
