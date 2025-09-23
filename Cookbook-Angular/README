@@ -1,0 +1,25 @@
+Cookbook Angular Project
+
+Description:
+This is a personal Angular project where I built a Cookbook app. Users can browse, search, and view recipes. The project helped me learn Angular components, services, routing, and data binding.
+
+Setup Instructions:
+1. Clone the repository
+   git clone <your-repo-url>
+2. Navigate to the project folder
+   cd cookbook-angular
+3. Install dependencies
+   npm install
+4. Run the development server
+   ng serve
+5. Open a browser and go to http://localhost:4200
+
+Project Structure:
+- src/           --> Contains all the source code (components, services, modules)
+- assets/        --> Images, icons, and other static assets
+- angular.json   --> Angular CLI configuration
+- package.json   --> Project dependencies and scripts
+
+Notes:
+- This is a learning project; styling is basic and may not be fully responsive.
+- node_modules/ and dist/ are excluded from this repository.
