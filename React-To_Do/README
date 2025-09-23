@@ -1,0 +1,41 @@
+React To-Do App
+
+Description:
+This is a simple React application to manage a to-do list. Users can add new tasks, mark tasks as complete, edit tasks, and delete tasks. The application uses React functional components and hooks for state management.
+
+Features:
+- Add new tasks
+- Mark tasks as completed
+- Edit existing tasks
+- Delete tasks
+- Persist tasks using local storage (optional)
+
+Installation:
+1. Make sure Node.js and npm are installed.
+2. Clone the repository.
+3. Navigate to the project folder.
+4. Run 'npm install' to install dependencies.
+5. Run 'npm start' to launch the app in development mode.
+
+File Structure:
+- package.json          : Project dependencies and scripts
+- package-lock.json     : Lockfile for npm dependencies
+- angular.json          : Angular config (if migrated from Angular project)
+- tsconfig.json         : TypeScript configuration
+- index.html            : Main HTML file
+- main.ts / main.jsx    : Entry point for React app
+- styles.css / app.css  : CSS styles
+- app.ts / app.jsx      : Main App component
+- app.spec.ts           : Test file (if applicable)
+- app.routes.ts         : Route definitions
+- app.config.ts         : App configuration
+
+Usage:
+- Open the app in the browser at http://localhost:3000
+- Use the interface to manage your to-do list
+
+Author:
+Trisha Balamurugan
+
+Date:
+9/22/25
